@@ -1,34 +1,74 @@
 * {
-    box-sizing: border-box; 
-  }
+    box-sizing: border-box;
+}
 
-body{
+body {
     margin: 0;
     background-color: #181645 !important;
 }
-#hero {
+
+#hero,
+#certification {
     position: relative;
 }
 
-#hero::before {
+#certification {
+    height: 30rem !important;
+}
+
+#myVideoCertification {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#hero::before,
+#certification::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(101.38deg, rgba(0, 0, 0, 0.75) -0.29%, rgba(24, 22, 69, 0.75) 100.57%); /* Adjust the opacity and color as needed */
+    background: linear-gradient(101.38deg, rgba(5, 20, 107, 0.75) -0.29%, rgba(24, 22, 69, 0.75) 100.57%);
+    /* Adjust the opacity and color as needed */
     z-index: 0;
 }
 
 /* Adjust text color on top of the overlay */
 #hero h1,
 #hero h2,
-#hero a {
+#hero a,
+#certification h1,
+#certification h2,
+#certification a {
     color: #fff;
     z-index: 1;
 }
 
-.divider{
+.divider {
     margin-top: 10rem;
+}
+
+.custom-shape-divider-bottom-1687304935 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1687304935 svg {
+    position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 147px;
+}
+
+.custom-shape-divider-bottom-1687304935 .shape-fill {
+    fill: #0D6EFD;
 }
