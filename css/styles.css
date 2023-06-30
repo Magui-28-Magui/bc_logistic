@@ -1,5 +1,13 @@
-* {
+*,
+:before,
+:after {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --clr-dark: #3C2846;
+    --clr-light: #FAFAFA;
 }
 
 body {
@@ -139,82 +147,255 @@ body {
 }
 
 @media (max-width: 768px) {
-    .carousel-inner .carousel-item > div {
-      display: none;
+    .carousel-inner .carousel-item>div {
+        display: none;
     }
-    .carousel-inner .carousel-item > div:first-child {
-      display: block;
-    }
-  }
-  
-  .carousel-inner .carousel-item.active,
-  .carousel-inner .carousel-item-start,
-  .carousel-inner .carousel-item-next,
-  .carousel-inner .carousel-item-prev {
-    display: flex;
-    /*transition-duration: 10s;*/
-  }
-  
-  /* display 4 */
-  @media (min-width: 768px) {
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next,
-    .carousel-item-next:not(.carousel-item-start) {
-      transform: translateX(25%) !important;
-    }
-  
-    .carousel-inner .carousel-item-left.active,
-    .carousel-item-prev:not(.carousel-item-end),
-    .active.carousel-item-start,
-    .carousel-item-prev:not(.carousel-item-end) {
-      transform: translateX(-25%) !important;
-    }
-  
-    .carousel-item-next.carousel-item-start, .active.carousel-item-end {
-      transform: translateX(0) !important;
-    }
-  
-    .carousel-inner .carousel-item-prev,
-    .carousel-item-prev:not(.carousel-item-end) {
-      transform: translateX(-25%) !important;
-    }
-  }
 
-  #footer {
-    background-image:
-    linear-gradient(101.38deg, rgba(5, 20, 107, 0.75) -0.29%, rgba(24, 22, 69, 0.75) 100.57%),
-        url('./../img/images/pexels-craig-adderley-2449454.jpg');
-background-size: cover;   
-background-attachment: fixed;
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
 }
 
-/*DEMO ONLY*/
-.service-categories{
+
+.carousel {
+    margin: 30px auto 60px;
+    padding: 0 80px;
+}
+
+.carousel .carousel-item {
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .thumb-content {
+    padding: 15px;
+    font-size: 13px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 44px;
+    width: 44px;
+    background: none;
+    margin: auto 0;
+    border-radius: 50%;
+    /*border: 3px solid rgba(0, 0, 0, 0.8);*/
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.carousel-control-prev i {
+    margin-left: -3px;
+}
+
+.carousel-control-next i {
+    margin-right: -3px;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 4px;
+    border: none;
+}
+
+.carousel-indicators li {
+    background: #ababab;
+}
+
+.carousel-indicators li.active {
+    background: #555;
+}
+
+#footer {
+    background-image:
+        linear-gradient(101.38deg, rgba(5, 20, 107, 0.842) -0.29%, rgba(24, 22, 69, 0.75) 100.57%),
+        url('./../img/images/pexels-craig-adderley-2449454.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.service-categories {
     padding-top: 3em;
     padding-bottom: 3em;
     background-size: cover;
-  }
-  /*DEMO ONLY*/
-  .service-categories .card{
+}
+
+.service-categories .card {
     transition: all 0.2s;
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-  .service-categories .card-title{
+}
+
+.service-categories .card-title {
     padding-top: 0.5em;
-  }
-  .service-categories a:hover{
+}
+
+.service-categories a:hover {
     text-decoration: none;
-  }
-  .service-card{
+}
+
+.service-card {
     background: rgba(72, 88, 104, 0.9);
     border: 0;
-  }
-  .service-card:hover{
-    /*background: linear-gradient(101.38deg, rgba(5, 20, 107, 0.75) -0.29%, rgba(24, 22, 69, 0.75) 100.57%);*/
+}
+
+.service-card:hover {
     border-right: 5px solid orange;
     border-left: 5px solid orange;
-  }
-  .fa{
+}
+
+.fa {
     color: white;
-  }
+}
+
+.circle_pattern {
+    margin: -2.5rem;
+}
+
+.group {
+    position: relative;
+    margin: 45px 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 85%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 4px solid #c6c6c6;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
+    top: -14px;
+    font-size: 13px;
+    color: #FEC62E;
+}
+
+input:focus~.bar:before,
+textarea:focus~.bar:before {
+    width: 100%;
+}
+
+input[type="password"] {
+    letter-spacing: 0.3em;
+}
+
+label {
+    color: #c6c6c6;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 300ms ease all;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 85%;
+}
+
+.bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #FEC62E;
+    transition: 300ms ease all;
+    left: 0%;
+}
+
+
+.card_transportation {
+    /*width: 300px;*/
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card_transportation:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #fff;
+    color: #0D6EFD;
+    align-items: center;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(rgba(5, 20, 107, 0.842), rgba(9, 5, 83, 0.75));
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background-color: #fff;
+    color: #0D6EFD;
+    align-items: center;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(rgba(5, 20, 107, 0.842), rgba(9, 5, 83, 0.75));
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 20px;
+    transform: rotateY(180deg);
+}
