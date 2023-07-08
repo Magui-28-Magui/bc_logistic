@@ -20,3 +20,5 @@ const observer = new IntersectionObserver(uploadAboutImage, {
  });
 
  observer.observe(aboutImage);
+
+ https://www.youtube.com/watch?v=cVsqA4NhDoI
