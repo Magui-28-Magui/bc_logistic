@@ -76,7 +76,7 @@
         <section id="about_us" class="mt-5 text-white position-relative">
             <img src="./img/icons/dot circle.png" id="blue_dots" class="position-absolute" alt=" circle">
             <div class="row">
-                <div class="col-md-6 col-sm-12 col-lg-6" id="about_us_text">
+                <div class="col-md-6 col-sm-12 col-lg-6 about_us_text position_left" id="about_us_text_id">
                     <h4 class="text-center fw-bold text-uppercase mb-5">About Us</h4>
                     <p class="p-5">Since 2008, <span class="fw-bold text-warning">BC Logistics</span> has been a
                         trusted provider of reliable and punctual
@@ -93,15 +93,15 @@
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-12 col-lg-6">
-                    <img class="figure-img img-fluid" src="./img/images/g10-1.png" id="about_us_image" alt="">
+                    <img class="figure-img img-fluid about_us_image position_right" src="./img/images/g10-1.png" id="about_us_image_id" alt="">
                 </div>
             </div>
             <div class="divider"></div>
             <div class="row mt-5">
-                <div class="col-md-6 order-xs-2 order-md-1">
+                <div class="col-md-6 order-xs-2 order-md-1 position_left vision_image" id="vision_image_id">
                     <img class="figure-img img-fluid order-sm-2" src="./img/images/g10.png" alt="">
                 </div>
-                <div class="col-md-6 order-xs-1 order-md-2">
+                <div class="col-md-6 order-xs-1 order-md-2 position_right vision_text" id="vision_text_id">
                     <h4 class="text-center fw-bold text-uppercase mb-5">Mission</h4>
                     <p class="p-5 order-sm-3">
                         To provide highly efficient logistic services and outstanding customer care, enabling our
@@ -114,7 +114,7 @@
         <section id="transportation_services">
             <div class="row bg-primary container-fluid p-0 m-0">
                 <h4 class="text-center fw-bold text-uppercase mt-5 text-white">transportation services</h4>
-                <div class="col-md-5">
+                <div class="col-md-5 position_left image_transportation_services" id="image_transportation_services_id">
                     <div class="img-fluid">
                         <svg-animate trigger="loop">
                             <svg viewBox="0 0 1001 820" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -6763,7 +6763,7 @@
                         </svg-animate>
                     </div>
                 </div>
-                <div class="col-md-7 mt-5">
+                <div class="col-md-7 mt-5 position_right transportation_services_carousel" id="transportation_services_carousel_id">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
@@ -6885,19 +6885,19 @@
         </section>
         <section id="located" class="p-5 mt-5">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 we_are_located_text position_left" id="we_are_located_text_id" >
                     <h2 class="text-uppercase text-white p-3 mt-5">We are located in <span
                             class="text-primary fw-bold">california/baja California</span> border
                         and cover <span class="fw-bold text-warning text-decoration-underline">usa, canada and
                             mexico</span></h2>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 we_are_located_image position_right" id="we_are_located_image_id">
                     <img src="./img/icons/map.svg" class="img-fluid" alt="location map">
                 </div>
             </div>
         </section>
         <div class="divider"></div>
-        <section id="equipment">
+        <section id="equipment" class="equipment_cards">
             <div class="row container-fluid p-0 m-0 text-uppercase d-flex justify-content-center">
                 <h4 class="text-center fw-bold mt-5 mb-5 text-white">equipment</h4>
                 <div class="col-md-12 col-lg-2 col-sm-12">
@@ -7028,7 +7028,7 @@
             <div class="container position-absolute w-100 text-uppercase px-5 py-5" data-aos="fade-up"
                 data-aos-delay="500">
                 <h4 class="text-center fw-bold mt-5 text-white mb-5">Certifications</h4>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center certifications" id="certification_images_id">
                     <div class="col-md-12 col-lg-3 col-sm-12 mb-5">
                         <div class="w-100"><img class="img-fluid" style="margin-top: 5rem;"
                                 src="./img/images/CTPAT logo.png" alt=""></div>
@@ -7151,7 +7151,7 @@
         <img src="./img/images/waves.svg" class="w-100 position-absolute" alt="waves" />
         <section id="footer" class="w-100 overflow-hidden">
             <div class="row">
-                <div class="col-md-6 mt-5 p-5">
+                <div class="col-md-6 mt-5 p-5 form_footer position_left" id="form_footer_id">
                     <h4 class="fw-bold text-uppercase mt-5 text-white mt-5 mb-2">Contact Us</h4>
                     <div class="group"><input type="text" required="required" /><span class="highlight"></span><span
                             class="bar"></span><label>Full Name</label></div>
@@ -7169,7 +7169,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-md-6 img-fluid mt-5">
+                <div class="col-md-6 img-fluid mt-5 image_truck position_right" id="image_truck_id">
                     <img src="./img/images/vector truck.png"
                         class="vector_truck mt-5 float-panel animate__animated animate__slideInRight animate__slow"
                         alt="truck" />
